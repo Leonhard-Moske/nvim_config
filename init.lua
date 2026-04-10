@@ -166,6 +166,10 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- Enable spell checking
+vim.o.spell = true
+vim.o.spelllang = 'en_us'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -894,6 +898,9 @@ require('lazy').setup({
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.cmd.colorscheme 'tokyonight-night'
+      -- Ensure spell highlights are visible (undercurl may not render in all terminals)
+      vim.api.nvim_set_hl(0, 'SpellBad', { undercurl = true, sp = '#f7768e', fg = '#f7768e' })
+      vim.api.nvim_set_hl(0, 'SpellCap', { undercurl = true, sp = '#e0af68' })
     end,
   },
 
