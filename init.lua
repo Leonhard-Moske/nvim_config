@@ -169,6 +169,7 @@ vim.o.confirm = true
 -- Enable spell checking
 vim.o.spell = true
 vim.o.spelllang = 'en_us'
+-- NOTE: Terminal can prevent rendering of the default spellcheck highlight, so we use a custom one with an underline.
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
